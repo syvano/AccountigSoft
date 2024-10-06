@@ -3,7 +3,6 @@ C:\Users\ascha\source\repos\AccountigSoftSn\AccountigSoft\bin\Debug\net8.0-windo
 C:\Users\ascha\source\repos\AccountigSoftSn\AccountigSoft\bin\Debug\net8.0-windows\AccountigSoft.runtimeconfig.json
 C:\Users\ascha\source\repos\AccountigSoftSn\AccountigSoft\bin\Debug\net8.0-windows\AccountigSoft.dll
 C:\Users\ascha\source\repos\AccountigSoftSn\AccountigSoft\bin\Debug\net8.0-windows\AccountigSoft.pdb
-C:\Users\ascha\source\repos\AccountigSoftSn\AccountigSoft\obj\Debug\net8.0-windows\AccountigSoft.Form1.resources
 C:\Users\ascha\source\repos\AccountigSoftSn\AccountigSoft\obj\Debug\net8.0-windows\AccountigSoft.csproj.GenerateResource.cache
 C:\Users\ascha\source\repos\AccountigSoftSn\AccountigSoft\obj\Debug\net8.0-windows\AccountigSoft.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\ascha\source\repos\AccountigSoftSn\AccountigSoft\obj\Debug\net8.0-windows\AccountigSoft.AssemblyInfoInputs.cache
@@ -14,3 +13,5 @@ C:\Users\ascha\source\repos\AccountigSoftSn\AccountigSoft\obj\Debug\net8.0-windo
 C:\Users\ascha\source\repos\AccountigSoftSn\AccountigSoft\obj\Debug\net8.0-windows\AccountigSoft.pdb
 C:\Users\ascha\source\repos\AccountigSoftSn\AccountigSoft\obj\Debug\net8.0-windows\AccountigSoft.genruntimeconfig.cache
 C:\Users\ascha\source\repos\AccountigSoftSn\AccountigSoft\obj\Debug\net8.0-windows\ref\AccountigSoft.dll
+C:\Users\ascha\source\repos\AccountigSoftSn\AccountigSoft\obj\Debug\net8.0-windows\AccountigSoft.MainFrm.resources
+C:\Users\ascha\source\repos\AccountigSoftSn\AccountigSoft\obj\Debug\net8.0-windows\AccountigSoft.sourcelink.json

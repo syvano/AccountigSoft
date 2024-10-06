@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AccountigSoft")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+747128ff03cd2949b61b60355a3bf586f66f325a")]
 [assembly: System.Reflection.AssemblyProductAttribute("AccountigSoft")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AccountigSoft")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
