@@ -16,5 +16,15 @@ namespace AccountigSoft
         {
             InitializeComponent();
         }
+
+        private void minBtn_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
