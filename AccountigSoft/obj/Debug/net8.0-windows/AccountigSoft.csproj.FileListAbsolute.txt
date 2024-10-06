@@ -32,3 +32,4 @@ C:\Users\ascha\source\repos\AccountigSoft\AccountigSoft\obj\Debug\net8.0-windows
 C:\Users\ascha\source\repos\AccountigSoft\AccountigSoft\obj\Debug\net8.0-windows\AccountigSoft.pdb
 C:\Users\ascha\source\repos\AccountigSoft\AccountigSoft\obj\Debug\net8.0-windows\AccountigSoft.genruntimeconfig.cache
 C:\Users\ascha\source\repos\AccountigSoft\AccountigSoft\obj\Debug\net8.0-windows\ref\AccountigSoft.dll
+C:\Users\ascha\source\repos\AccountigSoft\AccountigSoft\obj\Debug\net8.0-windows\AccountigSoft.Properties.Resources.resources
