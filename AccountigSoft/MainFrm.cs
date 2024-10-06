@@ -26,5 +26,10 @@ namespace AccountigSoft
         {
             this.Close();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            this.DateTimeLabel.Text = DateTime.Now.Date.ToShortDateString() + " | " + DateTime.Now.ToLongTimeString();    
+        }
     }
 }
