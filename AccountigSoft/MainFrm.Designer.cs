@@ -41,7 +41,7 @@
             DateTimeLabel = new Label();
             UserLabel = new Label();
             UserPictureBox = new PictureBox();
-            comboBox1 = new ComboBox();
+            BackgroundComboBox = new ComboBox();
             label1 = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
             topPanel.SuspendLayout();
@@ -164,7 +164,7 @@
             bottomPanel.Controls.Add(DateTimeLabel);
             bottomPanel.Controls.Add(UserLabel);
             bottomPanel.Controls.Add(UserPictureBox);
-            bottomPanel.Controls.Add(comboBox1);
+            bottomPanel.Controls.Add(BackgroundComboBox);
             bottomPanel.Controls.Add(label1);
             bottomPanel.Dock = DockStyle.Bottom;
             bottomPanel.Location = new Point(0, 1082);
@@ -211,15 +211,16 @@
             UserPictureBox.TabIndex = 2;
             UserPictureBox.TabStop = false;
             // 
-            // comboBox1
+            // BackgroundComboBox
             // 
-            comboBox1.Cursor = Cursors.Hand;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Image 1", "Image 2", "Image 3", "Image 4", "Image 5", "Image 6" });
-            comboBox1.Location = new Point(144, 28);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(182, 33);
-            comboBox1.TabIndex = 1;
+            BackgroundComboBox.Cursor = Cursors.Hand;
+            BackgroundComboBox.FormattingEnabled = true;
+            BackgroundComboBox.Items.AddRange(new object[] { "Image 1", "Image 2", "Image 3", "Image 4", "Image 5", "Image 6" });
+            BackgroundComboBox.Location = new Point(144, 28);
+            BackgroundComboBox.Name = "BackgroundComboBox";
+            BackgroundComboBox.Size = new Size(182, 33);
+            BackgroundComboBox.TabIndex = 1;
+            BackgroundComboBox.SelectedIndexChanged += BackgroundComboBox_SelectedIndexChanged;
             // 
             // label1
             // 
@@ -240,6 +241,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1871, 1183);
             Controls.Add(bottomPanel);
             Controls.Add(topPanel);
@@ -251,6 +253,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Accounting Software";
             WindowState = FormWindowState.Maximized;
+            Load += MainFrm_Load;
             topPanel.ResumeLayout(false);
             bottomPanel.ResumeLayout(false);
             bottomPanel.PerformLayout();
@@ -268,7 +271,7 @@
         private Button ReportsBtn;
         private Button HelpBtn;
         private Button ToolsBtn;
-        private ComboBox comboBox1;
+        private ComboBox BackgroundComboBox;
         private Label label1;
         private Label UserLabel;
         private PictureBox UserPictureBox;
