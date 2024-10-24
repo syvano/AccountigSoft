@@ -29,6 +29,16 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            TreeNode treeNode1 = new TreeNode("Customers", 1, 1);
+            TreeNode treeNode2 = new TreeNode("Sales Invoice", 9, 9);
+            TreeNode treeNode3 = new TreeNode("Purchase Bill", 5, 5);
+            TreeNode treeNode4 = new TreeNode("Invoices", 3, 3, new TreeNode[] { treeNode2, treeNode3 });
+            TreeNode treeNode5 = new TreeNode("Send Money", 10, 10);
+            TreeNode treeNode6 = new TreeNode("Recieve Money", 6, 6);
+            TreeNode treeNode7 = new TreeNode("Payments", 4, 4, new TreeNode[] { treeNode5, treeNode6 });
+            TreeNode treeNode8 = new TreeNode("Expenses", 2, 2);
+            TreeNode treeNode9 = new TreeNode("All Tasks", 8, 8, new TreeNode[] { treeNode1, treeNode4, treeNode7, treeNode8 });
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFrm));
             topPanel = new Panel();
             HelpBtn = new Button();
             ToolsBtn = new Button();
@@ -44,14 +54,20 @@
             BackgroundComboBox = new ComboBox();
             label1 = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
+            panel1 = new Panel();
+            treeView1 = new TreeView();
+            imageList1 = new ImageList(components);
             topPanel.SuspendLayout();
             bottomPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)UserPictureBox).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // topPanel
             // 
             topPanel.BackColor = SystemColors.MenuBar;
+            topPanel.BackgroundImage = Properties.Resources.butt_background;
+            topPanel.BackgroundImageLayout = ImageLayout.Stretch;
             topPanel.Controls.Add(HelpBtn);
             topPanel.Controls.Add(ToolsBtn);
             topPanel.Controls.Add(ReportsBtn);
@@ -237,12 +253,90 @@
             timer1.Interval = 1000;
             timer1.Tick += timer1_Tick;
             // 
+            // panel1
+            // 
+            panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(treeView1);
+            panel1.Location = new Point(22, 146);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(400, 445);
+            panel1.TabIndex = 2;
+            // 
+            // treeView1
+            // 
+            treeView1.Dock = DockStyle.Fill;
+            treeView1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            treeView1.ImageIndex = 0;
+            treeView1.ImageList = imageList1;
+            treeView1.Indent = 40;
+            treeView1.ItemHeight = 45;
+            treeView1.Location = new Point(0, 0);
+            treeView1.Name = "treeView1";
+            treeNode1.ImageIndex = 1;
+            treeNode1.Name = "customers";
+            treeNode1.SelectedImageIndex = 1;
+            treeNode1.Text = "Customers";
+            treeNode2.ImageIndex = 9;
+            treeNode2.Name = "salesInvoice";
+            treeNode2.SelectedImageIndex = 9;
+            treeNode2.Text = "Sales Invoice";
+            treeNode3.ImageIndex = 5;
+            treeNode3.Name = "purchaseBill";
+            treeNode3.SelectedImageIndex = 5;
+            treeNode3.Text = "Purchase Bill";
+            treeNode4.ImageIndex = 3;
+            treeNode4.Name = "invoices";
+            treeNode4.SelectedImageIndex = 3;
+            treeNode4.Text = "Invoices";
+            treeNode5.ImageIndex = 10;
+            treeNode5.Name = "sendMoney";
+            treeNode5.SelectedImageIndex = 10;
+            treeNode5.Text = "Send Money";
+            treeNode6.ImageIndex = 6;
+            treeNode6.Name = "recieveMoney";
+            treeNode6.SelectedImageIndex = 6;
+            treeNode6.Text = "Recieve Money";
+            treeNode7.ImageIndex = 4;
+            treeNode7.Name = "payments";
+            treeNode7.SelectedImageIndex = 4;
+            treeNode7.Text = "Payments";
+            treeNode8.ImageIndex = 2;
+            treeNode8.Name = "expenses";
+            treeNode8.SelectedImageIndex = 2;
+            treeNode8.Text = "Expenses";
+            treeNode9.ImageIndex = 8;
+            treeNode9.Name = "allTasks";
+            treeNode9.SelectedImageIndex = 8;
+            treeNode9.Text = "All Tasks";
+            treeView1.Nodes.AddRange(new TreeNode[] { treeNode9 });
+            treeView1.SelectedImageIndex = 0;
+            treeView1.Size = new Size(398, 443);
+            treeView1.TabIndex = 0;
+            // 
+            // imageList1
+            // 
+            imageList1.ColorDepth = ColorDepth.Depth32Bit;
+            imageList1.ImageStream = (ImageListStreamer)resources.GetObject("imageList1.ImageStream");
+            imageList1.TransparentColor = Color.Transparent;
+            imageList1.Images.SetKeyName(0, "products.png");
+            imageList1.Images.SetKeyName(1, "tree_customers.png");
+            imageList1.Images.SetKeyName(2, "tree_expense.png");
+            imageList1.Images.SetKeyName(3, "tree_invoice.png");
+            imageList1.Images.SetKeyName(4, "tree_payment.png");
+            imageList1.Images.SetKeyName(5, "tree_purchase_bill.png");
+            imageList1.Images.SetKeyName(6, "tree_receive.png");
+            imageList1.Images.SetKeyName(7, "tree_reports.png");
+            imageList1.Images.SetKeyName(8, "tree_root.png");
+            imageList1.Images.SetKeyName(9, "tree_sale_invoice.png");
+            imageList1.Images.SetKeyName(10, "tree_spend.png");
+            // 
             // MainFrm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1871, 1183);
+            Controls.Add(panel1);
             Controls.Add(bottomPanel);
             Controls.Add(topPanel);
             FormBorderStyle = FormBorderStyle.None;
@@ -258,6 +352,7 @@
             bottomPanel.ResumeLayout(false);
             bottomPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)UserPictureBox).EndInit();
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -278,5 +373,8 @@
         private Label label2;
         private Label DateTimeLabel;
         private System.Windows.Forms.Timer timer1;
+        private Panel panel1;
+        private TreeView treeView1;
+        private ImageList imageList1;
     }
 }
